@@ -1,4 +1,6 @@
-<template></template>
+<template>
+<NavigationBar/>
+</template>
 <script>
 import NavigationBar from "@/components/NavigationBar.vue";
 
@@ -13,5 +15,6 @@ export default {
 };
 </script>
 <style scoped>
-    
+    @import "../assets/css/normalize.css";
+    @import "../assets/css/gobal.css";
 </style>

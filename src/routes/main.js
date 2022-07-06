@@ -1,9 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Candidates from '../views/Candidates'
-import PoliticalParties from '../views/PoliticalParties'
-import Reports from '../views/Resports'
-import Results from '../views/Results'
-import VotingTables from '../views/VotingTables'
+import Candidates from '../views/Candidates/'
+import PoliticalParties from '../views/PoliticalParties/'
+import Reports from '../views/Resports/'
+import Results from '../views/Results/'
+import VotingTables from '../views/VotingTables/'
 
 const routes = [
     {
@@ -26,17 +26,17 @@ const routes = [
         children: [
             {
                 path: '',
-                component: () => import(VotingTables + 'VotingTables.vue')
+                component: () => import(VotingTables, 'VotingTables.vue')
             },
             {
                 path: 'votingTable-add/:_id',
                 name: 'votingTable-add',
-                component: () => import(VotingTables,'VotingTable.vue')
+                component: () => import(VotingTables, 'VotingTable.vue')
             },
             {
                 path: 'votingTable-detail/:_id',
                 name: 'votingTable-detail',
-                component: () => import(VotingTables,'VotingTableDetail.vue')
+                component: () => import(VotingTables, 'VotingTableDetail.vue')
             }
         ]
     },

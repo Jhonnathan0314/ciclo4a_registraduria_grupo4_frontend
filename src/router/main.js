@@ -1,20 +1,37 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Candidates from '../views/Candidates/'
-import PoliticalParties from '../views/PoliticalParties/'
-import Reports from '../views/Resports/'
-import Results from '../views/Results/'
-import VotingTables from '../views/VotingTables/'
+import Candidates from '../views/Candidates/Candidates.vue'
+import Candidate from '../views/Candidates/Candidate.vue'
+import CandidateDetail from '../views/Candidates/CandidateDetail.vue'
+
+
+import PoliticalParties from '../views/PoliticalParties/PoliticalParties.vue'
+import PoliticalParty from '../views/PoliticalParties/PoliticalParty.vue'
+import PoliticalPartyDetail from '../views/PoliticalParties/PoliticalPartyDetail.vue'
+
+import ReportPercentage from '../views/Reports/Percentage.vue'
+import ReportVotingTables from '../views/Reports/VotingTables.vue'
+import ReportPoliticalParties from '../views/Reports/PoliticalParties.vue'
+import ReportVotes from '../views/Reports/Votes.vue'
+
+
+import Results from '../views/Results/Results.vue'
+import Result from '../views/Results/Result.vue'
+import ResultDetail from '../views/Results/ResultDetail.vue'
+
+import VotingTables from '../views/VotingTables/VotingTables.vue'
+import VotingTable from '../views/VotingTables/VotingTable.vue'
+import VotingTableDetail from '../views/VotingTables/VotingTableDetail.vue'
 
 const routes = [
     {
         path: '/',
-        name: 'home',
-        component: () => import('../views/Home.vue')
-    },
-    {
-        path: '/logIn',
         name: 'LogIn',
         component: () => import('../views/LogIn.vue')
+    },
+    {
+        path: '/home',
+        name: 'home',
+        component: () => import('../views/Home.vue')
     },
     {
         path: '/signUp',
@@ -26,17 +43,17 @@ const routes = [
         children: [
             {
                 path: '',
-                component: () => import(VotingTables, 'VotingTables.vue')
+                component: VotingTables
             },
             {
                 path: 'votingTable-add/:_id',
                 name: 'votingTable-add',
-                component: () => import(VotingTables, 'VotingTable.vue')
+                component: VotingTable
             },
             {
                 path: 'votingTable-detail/:_id',
                 name: 'votingTable-detail',
-                component: () => import(VotingTables, 'VotingTableDetail.vue')
+                component: VotingTableDetail
             }
         ]
     },
@@ -45,17 +62,17 @@ const routes = [
         children: [
             {
                 path: '',
-                component: () => import(Candidates,'Candidates.vue')
+                component: Candidates
             },
             {
                 path: 'candidate-add/:_id',
                 name: 'candidate-add',
-                component: () => import(Candidates,'Candidate.vue')
+                component: () => Candidate
             },
             {
                 path: 'candidate-detail/:_id',
                 name: 'candidate-detail',
-                component: () => import(Candidates,'CandidateDetail.vue')
+                component: () => CandidateDetail
             }
         ]
     },
@@ -64,17 +81,17 @@ const routes = [
         children: [
             {
                 path: '',
-                component: () => import(PoliticalParties,'PoliticalParties.vue')
+                component:PoliticalParties
             },
             {
                 path: 'politicalParty-add/:_id',
                 name: 'politicalParty-add',
-                component: () => import(PoliticalParties,'PoliticalParty.vue')
+                component: PoliticalParty
             },
             {
                 path: 'politicalParty-detail/:_id',
                 name: 'politicalParty-detail',
-                component: () => import(PoliticalParties,'PoliticalPartyDetail.vue')
+                component: PoliticalPartyDetail
             }
         ]
     },
@@ -83,17 +100,17 @@ const routes = [
         children: [
             {
                 path: '',
-                component: () => import(Results,'Results.vue')
+                component: Results
             },
             {
                 path: 'result-add/:_id',
                 name: 'result-add',
-                component: () => import(Results,'Result.vue')
+                component: Result
             },
             {
                 path: 'result-detail/:_id',
                 name: 'result-detail',
-                component: () => import(Results,'ResultDetail.vue')
+                component: ResultDetail
             }
         ]
     },
@@ -102,19 +119,19 @@ const routes = [
         children: [
             {
                 path: 'percentage',
-                component: () => import(Reports,'Percentage.vue')
+                component: ReportPercentage
             },
             {
                 path: 'politicalParties',
-                component: () => import(Reports,'PoliticalParties.vue')
+                component:ReportPoliticalParties
             },
             {
                 path: 'votingParties',
-                component: () => import(Reports,'VotingParties.vue')
+                component:ReportVotingTables
             },
             {
                 path: 'votes',
-                component: () => import(Reports,'Votes.vue')
+                component:ReportVotes
             },
      
         ]

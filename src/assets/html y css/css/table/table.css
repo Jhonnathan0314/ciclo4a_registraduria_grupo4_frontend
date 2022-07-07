@@ -1,0 +1,34 @@
+.container__table {
+    display: flex;
+    margin: auto;
+    align-content: center;
+    justify-content: center;
+    margin-top: 30px;
+    max-height: 300px;
+    width: fit-content;
+    overflow: hidden scroll;
+}
+
+.table {
+    text-align: center;
+}
+
+.thead th {
+    padding: 10px 40px;
+    font-weight: bold;
+    font-size: 20px;
+    background: var(--color-azul-4);
+}
+
+.tbody th {
+    padding: 8px 40px;
+    font-size: 18px;
+    background: var(--color-azul-6);
+}
+
+.table-button {
+    background: var(--color-azul-6);
+    border: none;
+    margin: 0 5px;
+    cursor: pointer;
+}

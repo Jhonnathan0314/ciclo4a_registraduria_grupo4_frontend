@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/normalize.css">
+	<link rel="stylesheet" href="../../css/global.css">
+    <link rel="stylesheet" href="../../css/results/results.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <nav class="nav">
+            <div class="logo-nav">
+                <img src="../../images/logo.png" alt="">
+                <ul class="nav__ul">
+                    <li class="nav__ul-li">
+                        <a href="#">Mesas</a>
+                        <ul class="nav__ul-submenu">
+                            <li><a href="#">Crear</a></li>
+                            <li><a href="#">Buscar</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__ul-li">
+                        <a href="#">Partidos</a>
+                        <ul class="nav__ul-submenu">
+                            <li><a href="#">Crear</a></li>
+                            <li><a href="#">Buscar</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__ul-li">
+                        <a href="#">Candidatos</a>
+                        <ul class="nav__ul-submenu">
+                            <li><a href="#">Crear</a></li>
+                            <li><a href="#">Buscar</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__ul-li">
+                        <a href="#">Resultados</a>
+                        <ul class="nav__ul-submenu">
+                            <li><a href="#">Registrar</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__ul-li">
+                        <a href="#">Reportes</a>
+                        <ul class="nav__ul-submenu">
+                            <li><a href="#">Votos</a></li>
+                            <li><a href="#">Mesas</a></li>
+                            <li><a href="#">Partidos</a></li>
+                            <li><a href="#">Porcentajes</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__ul-li"><a href="#">Salir</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="container__title">
+            <h1 class="h1-semibold">Resultados</h1>
+        </div>
+        <div class="container__select">
+            <div class="container-select-arrow">
+                <select name="" id="" class="select">
+                    <option value="">Partidos</option>
+                    <option value="">Candidatos</option>
+                </select>
+                <span class="select-arrow"></span>
+            </div>
+        </div>
+        <div class="container__box">
+            <div class="main-row row-left" onclick="move_left()"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
+			<div class="main-row row-right" onclick="move_right()"><i class="fa fa-chevron-right" aria-hidden="true"></i></div>
+			<div class="container__content-hide" id="lateralmove">
+				<div class="hide-scroll">
+					<div class="container__box-partido">
+						<div class="partido-img">
+							<img src="../../images/partido-pacto-historico.png">
+						</div>
+						<div class="partido-info">
+							<div class="partido-name">Pacto historico</div>
+							<div class="partido-motto">Votos: 1234567</div>
+						</div>
+					</div>
+                    <div class="container__box-partido">
+						<div class="partido-img">
+							<img src="../../images/partido-cambio-radical.png">
+						</div>
+						<div class="partido-info">
+							<div class="partido-name">Cambio radical</div>
+							<div class="partido-motto">Votos: 1234567</div>
+						</div>
+					</div>
+                    <div class="container__box-partido">
+						<div class="partido-img">
+							<img src="../../images/partido-centro-democratico.png">
+						</div>
+						<div class="partido-info">
+							<div class="partido-name">Centro democratico</div>
+							<div class="partido-motto">Votos: 1234567</div>
+						</div>
+					</div>
+                    <div class="container__box-partido">
+						<div class="partido-img">
+							<img src="../../images/partido-centro-esperanza.png">
+						</div>
+						<div class="partido-info">
+							<div class="partido-name">Centro esperanza</div>
+							<div class="partido-motto">Votos: 1234567</div>
+						</div>
+					</div>
+                    <div class="container__box-partido">
+						<div class="partido-img">
+							<img src="../../images/partido-comunes.png">
+						</div>
+						<div class="partido-info">
+							<div class="partido-name">Comunes</div>
+							<div class="partido-motto">Votos: 1234567</div>
+						</div>
+					</div>
+                    <div class="container__box-partido">
+						<div class="partido-img">
+							<img src="../../images/partido-estamos-listas.jpg">
+						</div>
+						<div class="partido-info">
+							<div class="partido-name">Estamos listas</div>
+							<div class="partido-motto">Votos: 1234567</div>
+						</div>
+					</div>
+                    <div class="container__box-partido">
+						<div class="partido-img">
+							<img src="../../images/partido-fuerza-ciudadana.png">
+						</div>
+						<div class="partido-info">
+							<div class="partido-name">Fuerza ciudadana</div>
+							<div class="partido-motto">Votos: 1234567</div>
+						</div>
+					</div>
+                    <div class="container__box-partido">
+						<div class="partido-img">
+							<img src="../../images/partido-gente-nueva.png">
+						</div>
+						<div class="partido-info">
+							<div class="partido-name">Gente nueva</div>
+							<div class="partido-motto">Votos: 1234567</div>
+						</div>
+					</div>
+                    <div class="container__box-partido">
+						<div class="partido-img">
+							<img src="../../images/partido-liberal.png">
+						</div>
+						<div class="partido-info">
+							<div class="partido-name">Liberal</div>
+							<div class="partido-motto">Votos: 1234567</div>
+						</div>
+					</div>
+                    <div class="container__box-partido">
+						<div class="partido-img">
+							<img src="../../images/partido-mira.png">
+						</div>
+						<div class="partido-info">
+							<div class="partido-name">Mira</div>
+							<div class="partido-motto">Votos: 1234567</div>
+						</div>
+					</div>
+                    <div class="container__box-partido">
+						<div class="partido-img">
+							<img src="../../images/partido-nuevo-liberalismo.jpg">
+						</div>
+						<div class="partido-info">
+							<div class="partido-name">Nuevo liberalismo</div>
+							<div class="partido-motto">Votos: 1234567</div>
+						</div>
+					</div>
+                    <div class="container__box-partido">
+						<div class="partido-img">
+							<img src="../../images/partido-r11.png">
+						</div>
+						<div class="partido-info">
+							<div class="partido-name">R11</div>
+							<div class="partido-motto">Votos: 1234567</div>
+						</div>
+					</div>
+                    <div class="container__box-partido">
+						<div class="partido-img">
+							<img src="../../images/partido-salvacion-nacional.png">
+						</div>
+						<div class="partido-info">
+							<div class="partido-name">Salvacion nacional</div>
+							<div class="partido-motto">Votos: 1234567</div>
+						</div>
+					</div>
+                    <div class="container__box-partido">
+						<div class="partido-img">
+							<img src="../../images/partido-sos-colombia.png">
+						</div>
+						<div class="partido-info">
+							<div class="partido-name">SOS Colombia</div>
+							<div class="partido-motto">Votos: 1234567</div>
+						</div>
+					</div>
+                    <div class="container__box-partido">
+						<div class="partido-img">
+							<img src="../../images/partido-u.png">
+						</div>
+						<div class="partido-info">
+							<div class="partido-name">Partido de la U</div>
+							<div class="partido-motto">Votos: 1234567</div>
+						</div>
+					</div>
+				</div>
+			</div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <p>Esto es solo una prueba de desarrollo web, no es el sitio oficial de la registraduria :v</p>
+        </div>
+    </footer>
+
+
+    <script type="text/javascript">
+		var mov_pixel=570;
+		function move_left(){
+			document.getElementById("lateralmove").scrollLeft=document.getElementById("lateralmove").scrollLeft-mov_pixel;
+		}
+		function move_right(){
+			document.getElementById("lateralmove").scrollLeft=document.getElementById("lateralmove").scrollLeft+mov_pixel;
+		}
+	</script>
+</body>
+</html>

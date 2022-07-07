@@ -1,0 +1,123 @@
+.container__select {
+    display: flex;
+    width: 80%;
+    margin: auto;
+}
+
+.container-search-bar {
+    width: 60%;
+    margin-left: 100px;
+}
+
+.container-search-bar input {
+    width: 80%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+    background: var(--color-azul-6);
+    text-align: center;
+    outline: none;
+}
+
+.icon {
+    height: 40px;
+    width: 40px;
+    background: var(--color-azul-6);
+    margin: auto;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.icon:hover {
+    background: var(--color-azul-4);
+}
+
+.find-icon {
+    margin-top: 25%;
+}
+
+.container-select-arrow {
+    position: relative;
+}
+
+.select {
+    padding: 10px 50px 10px 5px;
+    background: var(--color-azul-4);
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+}
+
+.select-arrow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    background: var(--color-azul-1);
+    height: 100%;
+    width: 2rem;
+    pointer-events: none;
+    border-radius: 0 15px 15px 0;
+}
+
+.select-arrow::before, .select-arrow::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.select-arrow::before {
+    border-left: .35em solid transparent;
+    border-right: .35em solid transparent;
+    border-bottom: .35em solid var(--color-azul-6);
+
+    top: 35%;
+}
+
+.select-arrow::after {
+    border-left: .35em solid transparent;
+    border-right: .35em solid transparent;
+    border-top: .35em solid var(--color-azul-6);
+
+    top: 60%;
+}
+
+.container__table {
+    display: flex;
+    margin: auto;
+    align-content: center;
+    justify-content: center;
+    margin-top: 30px;
+    max-height: 300px;
+    width: fit-content;
+    overflow: hidden scroll;
+}
+
+.table {
+    text-align: center;
+}
+
+.thead th {
+    padding: 10px 40px;
+    font-weight: bold;
+    font-size: 20px;
+    background: var(--color-azul-4);
+}
+
+.tbody th {
+    padding: 8px 40px;
+    font-size: 18px;
+    background: var(--color-azul-6);
+}
+
+.table-button {
+    background: var(--color-azul-6);
+    border: none;
+    margin: 0 5px;
+    cursor: pointer;
+}

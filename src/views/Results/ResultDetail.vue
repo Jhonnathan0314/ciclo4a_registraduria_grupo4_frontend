@@ -15,6 +15,6 @@ export default {
 };
 </script>
 <style scoped>
-    @import "../assets/css/normalize.css";
-    @import "../assets/css/gobal.css";
+    @import "../../assets/css/normalize.css";
+    @import "../../assets/css/global.css";
 </style>
